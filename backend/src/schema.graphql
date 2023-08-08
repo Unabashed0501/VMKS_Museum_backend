@@ -1,0 +1,35 @@
+type Query {
+  AllArticles: Article!
+}
+
+type Mutation {
+  AddArticle(articleInput: ArticleInput!): Article
+} 
+
+type Subscription {
+  ArticleCreated: Article
+  ArticleDeleted: Article
+  ArticleUpdated: Article
+}
+
+input ArticleInput {
+  writer: String!
+  description: String!
+  imageURL: String
+  time: String
+  title: String!
+  headline: Boolean!
+  content: String!
+  userpic: String
+}
+
+type Article {
+  writer: String!
+  description: String!
+  imageURL: String
+  time: String
+  title: String!
+  headline: Boolean!
+  content: String!
+  userpic: String
+}
