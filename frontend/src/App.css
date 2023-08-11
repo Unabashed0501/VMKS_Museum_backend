@@ -1,50 +1,65 @@
-/* App.css */
-.logo {
-  text-align: left;
-  padding: 10px;
+/* Base styles */
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 5.5;
+  color-scheme: dark;
+}
+
+.logo img {
+  max-width: 400px; /* the image will be as wide as up to 200px, but not more */
+  max-height: 300px; /* similar for height */
+  opacity: 0.9; /* Slightly reduce opacity for the mysterious vibe */
 }
 
 .grid-container {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr; /* Left, Middle, Right */
-  height: calc(100vh - 60px); /* Assuming navbar + logo height is 60px */
-  margin-top: 60px; /* Push grid below navbar and logo */
+  display: flex;
+  margin: 20px 0;
+  gap: 20px;
 }
 
 .left-panel,
+.middle-panel,
 .right-panel {
-  display: grid;
-  grid-template-rows: repeat(3, 1fr); /* For 3 extensible panels */
-  gap: 10px;
-  padding: 10px;
+  flex: 1;
+  padding: 20px;
+  background-color: rgba(173, 216, 230, 0.3); /* Light blue with transparency */
+  border: 1px solid rgba(173, 216, 230, 0.5);
+  border-radius: 8px;
+  overflow-y: auto;
+  backdrop-filter: blur(
+    4px
+  ); /* This will slightly blur the content behind the panels */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Slight shadow for depth */
+  transition: transform 0.3s ease; /* Transition for hover effect */
+}
+
+.extensible-panel {
+  background-color: rgba(
+    135,
+    206,
+    250,
+    0.3
+  ); /* A slightly different blue shade for the inner panels */
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid rgba(135, 206, 250, 0.5);
+  border-radius: 6px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.extensible-panel:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px); /* Panels move slightly upward on hover */
 }
 
 .middle-panel {
-  padding: 10px;
-  overflow-y: auto; /* Make it scrollable if content overflows */
+  order: 2;
 }
 
-.panel-content {
-  resize: vertical; /* Allow vertical resizing */
-  overflow: auto; /* To handle the overflow */
-  max-height: 90%; /* Limit the maximum height */
+.left-panel {
+  order: 1;
 }
 
-/***************************************************/
-/***************************************************/
-
-.extensible-panel {
-  overflow: hidden; /* Hide overflow for resizing */
-  resize: both; /* Allow both horizontal and vertical resizing */
-
-  /* Mysterious color */
-  background-color: #3a1c71; /* Deep purple color */
-  color: #e0e0e0; /* Light text color for contrast */
-  border: 1px solid #5e2c84; /* Slightly lighter border for definition */
-  border-radius: 5px; /* Rounded corners */
-}
-
-/* Optional hover effect */
-.extensible-panel:hover {
-  background-color: #4a2d8e; /* Slightly lighter purple on hover */
+.right-panel {
+  order: 3;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import "./assets/vmks_logo.png";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 import MKSIntroPanel from "./panels/MKSIntroPanel/MKSIntroPanel";
@@ -19,7 +20,7 @@ const App: React.FC = () => {
   return (
     <Router>
       <div className="logo">
-        <img src="./assets/vmks_logo.jpg" alt="Website Logo" />
+        <img src={require("./assets/vmks_logo.png")} alt="Website Logo" />
       </div>
 
       <NavBar />
