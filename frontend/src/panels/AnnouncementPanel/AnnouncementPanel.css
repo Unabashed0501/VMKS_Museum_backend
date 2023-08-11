@@ -1,0 +1,10 @@
+.panel-content {
+  resize: vertical; /* Allow vertical resizing */
+  overflow: auto; /* To handle the overflow */
+  max-height: 90%; /* Limit the maximum height */
+  background-color: #3a1c71; /* Deep purple color */
+  color: #e0e0e0; /* Light text color for contrast */
+  border: 1px solid #5e2c84; /* Slightly lighter border for definition */
+  padding: 10px; /* Some padding for content spacing */
+  border-radius: 5px; /* Rounded corners */
+}

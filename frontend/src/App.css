@@ -1,13 +1,32 @@
-/* .App {
+/* App.css */
+.logo {
   text-align: center;
-} */
+  padding: 10px;
+}
 
-/* General styling to reset some default browser styles */
-.App {
-  text-align: center;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  text-decoration: none; /* This will remove underlines from links */
-  font-family: Arial, sans-serif; /* A basic font for our site */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; /* Left, Middle, Right */
+  height: calc(100vh - 60px); /* Assuming navbar + logo height is 60px */
+  margin-top: 60px; /* Push grid below navbar and logo */
+}
+
+.left-panel,
+.right-panel {
+  display: grid;
+  grid-template-rows: repeat(6, auto); /* For 6 panels */
+  gap: 10px;
+  padding: 10px;
+  overflow-y: auto; /* Make it scrollable if content overflows */
+}
+
+.middle-panel {
+  padding: 10px;
+  overflow-y: auto; /* Make it scrollable if content overflows */
+}
+
+.panel-content {
+  resize: vertical; /* Allow vertical resizing */
+  overflow: auto; /* To handle the overflow */
+  max-height: 90%; /* Limit the maximum height */
 }
