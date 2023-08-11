@@ -14,7 +14,7 @@ const NavBar: React.FC = () => {
       position: "fixed",
       top: 0,
       right: 0,
-      backgroundColor: "#1e1e2f",
+      backgroundColor: "rgba(135, 206, 250, 0.5)",
       padding: "10px 20px",
       borderBottomLeftRadius: "20px",
       zIndex: 1000,
