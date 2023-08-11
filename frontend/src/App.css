@@ -1,6 +1,6 @@
 /* App.css */
 .logo {
-  text-align: center;
+  text-align: left;
   padding: 10px;
 }
 
@@ -14,10 +14,9 @@
 .left-panel,
 .right-panel {
   display: grid;
-  grid-template-rows: repeat(6, auto); /* For 6 panels */
+  grid-template-rows: repeat(3, 1fr); /* For 3 extensible panels */
   gap: 10px;
   padding: 10px;
-  overflow-y: auto; /* Make it scrollable if content overflows */
 }
 
 .middle-panel {
@@ -29,4 +28,23 @@
   resize: vertical; /* Allow vertical resizing */
   overflow: auto; /* To handle the overflow */
   max-height: 90%; /* Limit the maximum height */
+}
+
+/***************************************************/
+/***************************************************/
+
+.extensible-panel {
+  overflow: hidden; /* Hide overflow for resizing */
+  resize: both; /* Allow both horizontal and vertical resizing */
+
+  /* Mysterious color */
+  background-color: #3a1c71; /* Deep purple color */
+  color: #e0e0e0; /* Light text color for contrast */
+  border: 1px solid #5e2c84; /* Slightly lighter border for definition */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Optional hover effect */
+.extensible-panel:hover {
+  background-color: #4a2d8e; /* Slightly lighter purple on hover */
 }

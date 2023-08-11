@@ -26,9 +26,15 @@ const App: React.FC = () => {
 
       <div className="grid-container">
         <div className="left-panel">
-          <PathPanel />
-          <MKSIntroPanel />
-          <MaterialViewPanel />
+          <div className="extensible-panel">
+            <PathPanel />
+          </div>
+          <div className="extensible-panel">
+            <MKSIntroPanel />
+          </div>
+          <div className="extensible-panel">
+            <MaterialViewPanel />
+          </div>
         </div>
 
         <div className="middle-panel">
@@ -42,9 +48,15 @@ const App: React.FC = () => {
         </div>
 
         <div className="right-panel">
-          <AnnouncementPanel />
-          <FavoriteLinksPanel />
-          <OpeningHoursPanel />
+          <div className="extensible-panel">
+            <AnnouncementPanel />
+          </div>
+          <div className="extensible-panel">
+            <FavoriteLinksPanel />
+          </div>
+          <div className="extensible-panel">
+            <OpeningHoursPanel />
+          </div>
         </div>
       </div>
     </Router>
