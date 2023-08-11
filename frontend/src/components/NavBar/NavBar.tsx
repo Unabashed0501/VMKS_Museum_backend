@@ -15,31 +15,71 @@ const NavBar: React.FC = () => {
       top: 0,
       right: 0,
       backgroundColor: "rgba(135, 206, 250, 0.5)",
-      padding: "10px 20px",
+      padding: "5px 10px", // Reduced padding
       borderBottomLeftRadius: "20px",
       zIndex: 1000,
+      maxWidth: "80%",
     },
     ul: {
       listStyleType: "none",
       padding: 0,
       margin: 0,
       display: "flex",
-      gap: "15px",
+      gap: "10px", // Reduced gap
     },
     li: {
       display: "inline",
     },
     link: {
-      padding: "10px 15px",
+      padding: "5px 10px", // Reduced padding
       textDecoration: "none",
       color: "#d3d4de",
       borderRadius: "5px",
       transition: "background-color 0.3s",
+      fontSize: "14px", // Reduced font size, adjust as per your preference
     },
     linkHover: {
       backgroundColor: "#3f3f4f",
     },
   };
+
+  // const styles: {
+  //   nav: React.CSSProperties;
+  //   ul: React.CSSProperties;
+  //   li: React.CSSProperties;
+  //   link: React.CSSProperties;
+  //   linkHover?: React.CSSProperties;
+  // } = {
+  //   nav: {
+  //     position: "fixed",
+  //     top: 0,
+  //     right: 0,
+  //     backgroundColor: "rgba(135, 206, 250, 0.5)",
+  //     padding: "10px 20px",
+  //     borderBottomLeftRadius: "20px",
+  //     zIndex: 1000,
+  //   },
+  //   ul: {
+  //     listStyleType: "none",
+  //     padding: 0,
+  //     margin: 0,
+  //     display: "flex",
+  //     gap: "15px",
+  //   },
+  //   li: {
+  //     display: "inline",
+  //   },
+  //   link: {
+  //     padding: "10px 15px",
+  //     textDecoration: "none",
+  //     color: "#d3d4de",
+  //     borderRadius: "5px",
+  //     transition: "background-color 0.3s",
+  //   },
+  //   linkHover: {
+  //     backgroundColor: "#3f3f4f",
+  //   },
+  // };
 
   return (
     <nav style={styles.nav}>
