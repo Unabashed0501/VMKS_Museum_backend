@@ -62,8 +62,8 @@ const typeDefs = `#graphql
 
   type Mutation {
     AddArticle(articleInput: ArticleInput!): Article
-    # DeleteAnnouncement(id: Int!): Announcement
-    # EditAnnouncement(id: Int!, announcementInput: AnnouncementInput!): Announcement
+    DeleteArticle(articleInput: ArticleInput!): Article
+    EditArticle(id: Int!, articleInput: ArticleInput!): Article
     # AddTool(toolInput: ToolInput!): Tool
     # DeleteTool(id: Int!): Tool
     # EditTool(id: Int!, toolInput: ToolInput!): Tool
